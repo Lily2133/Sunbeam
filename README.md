@@ -1,6 +1,7 @@
-# Sunbeam
+# The Dreams
 ## Description
-This visual novel game is about the main character controlling their dream in an attempt to make it "perfect". However, a drawback on this is that the more one controls their dream, the more chaotic the dream gets until eventually, they would not be able to escape from it. 
+This is a first-person visual novel where the player enters a dream that seems to be the perfect day. Guided by a spirit, they make a series of choices to shape the dream around what they want. However, strange inconsistencies begin to appear, making the player question what's real and whether waking up is really the right choice. Ultimately, they must decide between returning to reality or remaining in a dream where everything is exactly as they want it.
+ 
 ## Getting Started
 ### Dependencies
 ### Installing
