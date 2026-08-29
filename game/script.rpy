@@ -1,15 +1,10 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define p = Character("[povname]")
-
-
-# The game starts here.
+﻿define p = Character("[povname]", color="#89cbfd")
 
 label start:
-    
-    "Welcome! What's your name?"
-    $ povname = renpy.input("Enter here")
+    play music "the_mountain-dreamy-dreamy-music-508007.mp3"
+    $ povname = renpy.input("Welcome! What is your name?", length = 32)
+    $ povname = povname.strip()
+    if not povname:
+        $ povname = "You"
+    p "Hi, I'm [povname]!"
     return
