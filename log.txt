@@ -1,17 +1,16 @@
-2026-08-29 20:22:58 UTC
+2026-08-29 20:30:48 UTC
 macOS-26.6.1-arm64-arm-64bit
 Ren'Py 8.4.1.25072401
 
-Early init took 17 ms
-Loading error handling took 12 ms
-Loading script took 59 ms
-Loading save slot metadata took 9 ms
+Early init took 21 ms
+Loading error handling took 11 ms
+Loading script took 40 ms
+Loading save slot metadata took 12 ms
 Loading persistent took 0 ms
 Running init code took 17 ms
 Loading analysis data took 1 ms
 Analyze and compile ATL took 0 ms
 Reloading save slot metadata took 3 ms
-Backing up script files to '/Users/felicity/Library/RenPy/backups/Sunbeam':
 Dump and make backups took 14 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
@@ -20,13 +19,13 @@ DPI scale factor: 1.000000
 Creating interface object took 0 ms
 Init translation took 0 ms
 Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 3 ms
-Save screen analysis took 5 ms
+Load screen analysis took 6 ms
+Analyze screens took 0 ms
+Save screen analysis took 0 ms
 Save pyanalysis took 0 ms
 Save bytecode took 0 ms
 Running _start took 0 ms
-Interface start took 209 ms
+Interface start took 199 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1470, 956)
@@ -40,7 +39,3 @@ Screen sizes: virtual=(1920, 1080) physical=(1470, 836) drawable=(2940, 1672)
 Maximum texture size: 4096x4096
 Screen sizes: virtual=(1920, 1080) physical=(1470, 836) drawable=(2940, 1672)
 Maximum texture size: 4096x4096
-Cleaning stores took 0 ms
-Load screen analysis took 15 ms
-Analyze screens took 0 ms
-Running _start took 1 ms
