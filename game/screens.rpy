@@ -287,50 +287,54 @@ style quick_button_text:
 ## This screen is included in the main and game menus, and provides navigation
 ## to other menus, and to start the game.
 
-screen navigation():
+screen navigation(is_main_screen=False):
 
     vbox:
-        style_prefix "navigation"
+        style_prefix ("main_navigation" if is_main_screen else "navigation")
 
-        xpos gui.navigation_xpos
-        yalign 0.5
+        if is_main_screen:
+            xalign 0.5
+            yalign 0.96
+        else:
+            xpos gui.navigation_xpos
+            yalign 0.5
 
         spacing gui.navigation_spacing
 
         if main_menu:
 
-            textbutton _("Start") action Start()
+            textbutton _("⭐️ Start ⭐️") action Start()
 
         else:
 
-            textbutton _("History") action ShowMenu("history")
+            textbutton _("⭐️ History ⭐️") action ShowMenu("history")
 
-            textbutton _("Save") action ShowMenu("save")
+            textbutton _("⭐️ Save ⭐️") action ShowMenu("save")
 
-        textbutton _("Load") action ShowMenu("load")
+        textbutton _("⭐️ Load ⭐️") action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _("⭐️ Preferences ⭐️") action ShowMenu("preferences")
 
         if _in_replay:
 
-            textbutton _("End Replay") action EndReplay(confirm=True)
+            textbutton _("⭐️ End Replay ⭐️") action EndReplay(confirm=True)
 
         elif not main_menu:
 
-            textbutton _("Main Menu") action MainMenu()
+            textbutton _("⭐️ Main Menu ⭐️") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        textbutton _("⭐️ About ⭐️") action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            textbutton _("⭐️ Help ⭐️") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            textbutton _("⭐️ Quit ⭐️") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -342,6 +346,17 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.text_properties("navigation_button")
+
+style main_navigation_button is navigation_button
+style main_navigation_button_text is navigation_button_text
+
+style main_navigation_button:
+    size_group "main_navigation"
+
+style main_navigation_button_text:
+    size 48
+    xalign 0.5
+    textalign 0.5
 
 
 ## Main Menu screen ############################################################
@@ -363,7 +378,7 @@ screen main_menu():
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
-    use navigation
+    use navigation(is_main_screen=True)
 
     if gui.show_name:
 
@@ -386,8 +401,6 @@ style main_menu_version is main_menu_text
 style main_menu_frame:
     xsize 420
     yfill True
-
-    background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0

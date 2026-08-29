@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 24: end of line expected.
+    s "Are you ready to make some nearly impossible decisions and plan your perfect day?":
+                                                                                         ^
+
+Ren'Py Version: Ren'Py 8.4.1.25072401
+Sat Aug 29 15:34:32 2026
